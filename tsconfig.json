@@ -1,30 +1,29 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2022" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext",
-    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+      "esnext"
+    ],
     "jsx": "react-jsx",
-    "module": "ESNext" /* Specify what module code is generated. */,
-    "rootDir": "./src" /* Specify the root folder within your source files. */,
-    "moduleResolution": "Bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "module": "ESNext",
+    "rootDir": ".",
+    "moduleResolution": "Bundler",
     "types": ["vitest/globals"],
-    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
-    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-    // "removeComments": true,                           /* Disable emitting comments. */
-    "noEmit": true /* Disable emitting files from a compilation. */,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
-    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+    "declaration": true,
+    "outDir": "./dist",
+    "noEmit": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "skipLibCheck": true
   },
+  "include": ["src/**/*", "tests/**/*"],
   "exclude": [
+    "node_modules",
+    "dist",
     "./bin/**/*.test.ts",
-    "./dist/**/*",
     "./bin/mocks/**/*",
     "./*.config.ts",
     "./src/test-apps",
@@ -35,6 +34,6 @@
     "./scripts",
     "./docs",
     "tsup*.ts",
-    "./src/external/react-use-websocket",
-  ],
+    "./src/external/react-use-websocket"
+  ]
 }
